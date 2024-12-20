@@ -1,5 +1,6 @@
 for x in "123456789abcdefghijk":
     sum1 = int("58" + x + "93a", 21) + int("48" + x + "9" + x + "c", 21)
+
     if sum1 % 17 == 0:
         print(x, sum1 // 17)
 
