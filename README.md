@@ -217,6 +217,20 @@ for address in bin_addresses:
 print(counter)
 ```
 ## №16 Рекурсия
+Это просто рекурсия в python. Делать нечего.
+
+> [!IMPORTANT]
+>  nothing to show.
+
+```python
+def f(n):
+    if n == 1:
+        return 1
+    elif n > 1:
+        n * f(n - 1)
+
+print((f(2024)/4 + f(2023)) / f(2022))
+```
 
 ## Пройдено
 - [x] №1 Схема дорог
