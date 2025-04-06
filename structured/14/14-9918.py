@@ -1,10 +1,9 @@
-res = set()
+for n in range(4, 100):
+    n1 = 1 * n**2 + 3 * n + 2
+    n2 = int("13", 8)
+    n3 = 1 * (n+1)**2 + 2 * (n+1) + 4
 
-for x in range(10, 67):
-    for y in range(x):
-        n1 = 7 * 67**4 + 3 * 67**3 + x * 67**2 + 67 + y
-        n2 = 4 * x**3 + 9 * x**2 + y * x + 6
+    if n1 + n2 == n3:
+        print(n)
 
-        res.add(n1 + n2)
 
-print(len(res))
