@@ -217,7 +217,7 @@ for address in bin_addresses:
 print(counter)
 ```
 ## №16 Рекурсия
-Это просто рекурсия в python. Делать нечего.
+Рекурсия - вызов функции в функции (python). Для решения используют основные свойства функций и их задания [py]
 
 > [!IMPORTANT]
 >  nothing to show.
