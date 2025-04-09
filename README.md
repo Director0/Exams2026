@@ -232,6 +232,31 @@ def f(n):
 print((f(2024)/4 + f(2023)) / f(2022))
 ```
 
+> [!CAUTION]
+> Если получим на выходе [ERROR: Maximum Recurssion Depth Exceded], значит глубина рекурсии больше *1000*, здесь есть 2 способа испарвить:
+> 1. Используем библиотеку sys, чтобы вызвать
+>     ```python
+>     from sys import setrecursionlimit
+> 
+>     setrecursionlimit(2000)
+> 
+>     def fibo(n):
+>         return n if n < 2 else fibo(n - 1) + fibo(n - 2)
+> 
+>     print(fibo(300))
+>     ```
+> 
+> 2. Через модуль lru_cache, он просто включается в начале и все
+>    ```python
+>    from functools import lru_cache
+>    @lru_cache()
+>    
+>    def fibo(n):
+>        return n if n < 2 else fibo(n - 1) + fibo(n - 2)
+>    
+>    print(fibo(300))
+>    ```
+
 ## Пройдено
 - [x] №1 Схема дорог
 - [x] №2 Анализ лог выражений
@@ -246,8 +271,11 @@ print((f(2024)/4 + f(2023)) / f(2022))
 - [x] №11 Кодирование информации 2
 - [x] №12 Исполнитель редактор
 - [x] №13 IP адресация
-- [ ] №14 IP адресация
-- [ ] №15 IP адресация
+- [ ] №14 Кодирование чисел
+- [ ] №15 logic
 - [x] №16 Рекурсия
+- [ ] №17 -
+- [ ] №18 -
+- [ ] №19 
 
 
