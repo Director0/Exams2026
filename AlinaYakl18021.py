@@ -19,3 +19,22 @@ for n in range(rang1, rang2 + 1): # // Select num to num from rang
     print(dev)
 
     dev.clear() # // Prepare for next selection
+
+
+# DIVISORS /////////////////////
+
+a, b = map(int, input().split())
+
+def div_n(n):
+    divs = set()
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            divs.add(i)
+            divs.add(n // i)
+
+    return len(divs)
+
+
+for i in range(a, b+1):
+    if div_n(i) == 4:
+        print(i)
