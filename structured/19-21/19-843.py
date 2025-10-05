@@ -16,7 +16,7 @@ def moves(s):
 
 @lru_cache(maxsize=None)
 def play(s):
-    if s < 10:
+    if sum(s) < 10:
         return "P0"
     elif any(play(t) in "P0" for t in moves(s)):
         return "V1"
@@ -30,7 +30,7 @@ def play(s):
         return "?"
 
 for s in range(20, 200):
-    print(s, play(s))
+    print(s, play(10, s))
 
 print(19, [s for s in range(20, 200) if play(10, s) in "P1"])
 print(20, [s for s in range(20, 200) if play(10, s) in "V2"])
