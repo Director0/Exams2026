@@ -12,12 +12,9 @@ for s in f:
         if s1.count(n) == 2 and n not in nums3:
             nums3.append(n)
 
-    if len(nums3) == 3:
-        for n in s1:
-            l1 = s1.remove(n)
-
-            if n ** 2 == s1[0] ** 2 + s1[1] ** 2:
-                cnt += 1
+    nums3 = sorted(nums3)
+    if len(nums3) == 3 and nums3[2] ** 2 == nums3[0] ** 2 + nums3[1] ** 2:
+        cnt += 1
 
 
 print(cnt)
