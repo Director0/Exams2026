@@ -1,4 +1,4 @@
-f = open("27A_24208.txt")
+f = open("27B_24208.txt")
 
 data = []
 
@@ -10,7 +10,7 @@ def dist(p1, p2):
     return ((p1[0] - p2[0])**2 + (p1[1] - p2[1])**2) ** 0.5
 
 def get_cluster(p0):
-    clst = [p for p in data if dist(p0, p) <= 0.85]
+    clst = [p for p in data if dist(p0, p) <= 1.3]
 
     for a in clst:
         data.remove(a)
@@ -48,3 +48,4 @@ cen3 = centroid(clst3)
 
 print(len(clst1), len(clst2), len(clst3))
 print(data)
+

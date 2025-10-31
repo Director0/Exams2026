@@ -1,11 +1,7 @@
 abt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 
-for p in range(1, 37):
-    # n1 = int("KOT", p)
-    # n2 = int("GOLODNI", p)
-    # n3 = int("MEEOW", p)
-    # n4 = int("100", p)
+for p in range(1, 45):
 
     n1 = (10 + abt.index("K")) * p**2 + (10 + abt.index("O")) * p**1 + (10 + abt.index("T")) * p**0
     n2 = (10 + abt.index("G")) * p**6 + (10 + abt.index("O")) * p**5 + (10 + abt.index("L")) * p**4 + (10 + abt.index("O")) * p**3 + (10 + abt.index("D")) * p**2 + (10 + abt.index("N")) * p**1 + (10 + abt.index("I")) * p**0
@@ -15,3 +11,6 @@ for p in range(1, 37):
 
     if n1 + n2 == n3 * n4 - 20194023088:
         print(p)
+
+
+print((10 + abt.index("P")) * 39**3 + (10 + abt.index("U")) * 39**2 + (10 + abt.index("R")) * 39**1 + (10 + abt.index("R")) * 39**0)
