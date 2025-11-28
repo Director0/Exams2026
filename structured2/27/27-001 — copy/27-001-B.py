@@ -1,4 +1,4 @@
-f = open("27A.txt")
+f = open("27B.txt")
 
 data = []
 
@@ -53,7 +53,31 @@ def anticen(clst):
 
 
 
-
 print(len(data))
 
+clst1 = get_cluster(data[0])
+clst2 = get_cluster(data[0])
+clst3 = get_cluster(data[0])
+clst4 = get_cluster(data[0])
+clst5 = get_cluster(data[0])
 
+print(len(clst1), len(clst2), len(clst3), len(clst4), len(clst5))
+print(data)
+
+cens = [cen(clst1), cen(clst2), cen(clst3), cen(clst4), cen(clst5)]
+anticens = [anticen(clst1), anticen(clst2), anticen(clst3), anticen(clst4), anticen(clst5)]
+
+print(cens, anticens)
+
+resx = []
+resy = []
+
+for cen in cens:
+    for anticen in anticens:
+        resx.append(abs(cen[0] - anticen[0]))
+        resy.append(abs(cen[1] - anticen[1]))
+
+print(len(resx), len(resy))
+print("----- answ: \n")
+
+print(max(resx) * 1000, max(resy) * 1000)
