@@ -8,6 +8,6 @@ for c1 in "FAIL":
             s = s.replace(c1 + c2, f"{c1} {c2}")
 
 
-#
+#z
 
 print(len(max(s.split(), key=len)))
