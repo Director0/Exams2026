@@ -13,3 +13,6 @@ for s in f:
 
     if (len(sp) == 2 and len(snp) == 3) and ((sum(sp) / len(sp)) < max(snp)):
         print(num)
+
+
+# num: 17

@@ -17,3 +17,5 @@ for s in f:
         gcnt +=1
 
 print(f"gcnt: {gcnt}")
+
+# gcnt: 245

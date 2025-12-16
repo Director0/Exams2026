@@ -17,3 +17,5 @@ for s in f:
         print(num)
 
 print(f"gcnt: {gcnt}")
+
+# gcnt: 2004

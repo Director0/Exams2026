@@ -13,3 +13,6 @@ for s in f:
 
     if (len(sp) == 1 and len(snp) == 4) and ((sum(s1[5:7]) > sum(s1[0:5]))):
         print(num)
+
+
+# num: 1433
