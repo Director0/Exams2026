@@ -12,3 +12,5 @@ for n in range(1, 1000):
     if r > 2000:
         print(n, r)
         break
+
+        
