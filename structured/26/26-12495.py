@@ -25,3 +25,4 @@ for v in ls:
 
 print(d)
 print(cnt)
+exit()
