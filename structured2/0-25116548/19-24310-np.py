@@ -19,6 +19,6 @@ def play(s):
     else:
         return "?"
 
-print(19, [s for s in range(1, 154) if play((5, s)) in "P1"])
+print(19, [s for s in range(1, 154) if any(play(t) in "V1" for t in moves((5, s)))])
 print(19, [s for s in range(1, 154) if play((5, s)) in "V2"])
 print(19, [s for s in range(1, 154) if play((5, s)) in "P2"])
