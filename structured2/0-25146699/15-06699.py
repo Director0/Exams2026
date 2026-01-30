@@ -9,8 +9,8 @@ def f(x, a1, a2):
 minl = 10**10
 
 for a1 in range(25, 120):
-    for a2 in range(a1, 120):
-        if all(f(x, a1, a2) for x in range(25, 41)) == 1:
+    for a2 in range(a1 + 1, 120):
+        if all(f(x, a1, a2) for x in range(0, 100)) == 1:
             if (a2 - a1) < minl:
                 minl = a2 - a1
 

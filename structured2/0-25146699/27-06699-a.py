@@ -17,7 +17,7 @@ def dist(p1, p2):
     return (((p1[0] - p2[0])**2) + ((p1[1] - p2[1])**2)) ** 0.5
 
 def get_cluster(p0, rs):
-    clst = [dist(p0, p) for p in data if rs < dist(p0, p) < 3 * rs]
+    clst = [dist(p0, p) - rs for p in data if rs <= dist(p0, p) <= 3 * rs]
 
     return clst
 
