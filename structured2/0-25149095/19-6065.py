@@ -13,7 +13,7 @@ def moves(s, s_prev):
 
 @lru_cache(maxsize=None)
 def play(s, s_prev):
-    if s >= 40:
+    if s >= 41:
         return "P0"
     elif any(play(t, x) in "P0" for t, x in moves(s, s_prev)):
         return "V1"
@@ -30,5 +30,5 @@ for s in range(2, 37):
     print(s, play(s, ""))
 
 print(19, [s for s in range(2, 38) if play(s, "") in "P1"])
-print(19, [s for s in range(2, 38) if play(s, "") in "V2"])
-print(19, [s for s in range(2, 38) if play(s, "") in "P2"])
+print(20, [s for s in range(2, 38) if play(s, "") in "V2"])
+print(21, [s for s in range(2, 38) if play(s, "") in "P2"])
