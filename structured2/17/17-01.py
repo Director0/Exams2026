@@ -1,0 +1,1 @@
+ls = [int(x) for x in f if len(str(abs(x))) >= 2 and str(x)[-1] == str(x)[-2]]
