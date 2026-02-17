@@ -1,7 +1,7 @@
 res = []
 r1 = set()
 
-for n in range(0, 256 + 1):
+for n in range(1, 256):
     n1 = f"{n:b}"
 
     if n % 2 == 0:
@@ -21,3 +21,30 @@ for x in res:
 
 print("\n", sorted(r1))
 print("\n", len(r1))
+
+# res = []
+#
+#
+# for n in range(1, 256):
+#     n1 = f"{n:b}"
+#
+#     if n % 2 == 0:
+#         n1 = "11" + n1 + "0"
+#     else:
+#         n1 = "1" + n1 + "00"
+#
+#     r = int(n1, 2)
+#
+#     res.append(r)
+#
+# print(sorted(res))
+#
+# cnt = 0
+#
+# for i in range(len(res) - 1):
+#     for j in range(i + 1, len(res)):
+#         if res[i] == res[j]:
+#             cnt += 1
+#
+# print(cnt)
+
