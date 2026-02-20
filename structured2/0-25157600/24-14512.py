@@ -1,5 +1,7 @@
 s = open("24_14512 (1).txt").read()
 
+
+
 maxl = 1
 res = []
 
