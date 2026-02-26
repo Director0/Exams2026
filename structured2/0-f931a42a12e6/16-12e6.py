@@ -15,6 +15,6 @@ def f(n):
         return n + 2 * f(n - 2) + 6 * f(n - 6)
 
 print(f(1001))
-print(log(f(3), 7))
+
 
 # print(f(20024) - 2 * f(20022) - 3 * f(20020) + 18 * f(20014))
