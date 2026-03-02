@@ -1,12 +1,12 @@
 from functools import lru_cache
 
 def moves(s):
-    a, b = s
-    return (a + 1, b), (a, b + 1), (a * 3, b), (a, b * 3)
+    return s + 1, s + 4, s * 2
+
 
 @lru_cache(maxsize=None)
 def play(s):
-    if sum(s) >= 154:
+    if s >= 76:
         return "P0"
     elif any(play(t) in "P0" for t in moves(s)):
         return "V1"
@@ -19,8 +19,7 @@ def play(s):
     else:
         return "?"
 
-print(19, [s for s in range(1, 154) if any(play(t) in "V1" for t in moves((5, s)))])
-print(19, [s for s in range(1, 154) if play((5, s)) in "V2"])
-print(19, [s for s in range(1, 154) if play((5, s)) in "P2"])
 
-print(play((5, 17)))
+print(19, [s for s in range(1, 76) if play(s) in "P1"])
+print(19, [s for s in range(1, 76) if play(s) in "V2"])
+print(19, [s for s in range(1, 76) if play(s) in "P2"])
