@@ -45,6 +45,9 @@ print(len(data))
 clst1 = get_cluster(data[0])
 clst2 = get_cluster(data[0])
 
+cen1 = cen(clst1)
+cen2 = cen(clst2)
+
 
 print(len(clst1))
 print(len(clst2))

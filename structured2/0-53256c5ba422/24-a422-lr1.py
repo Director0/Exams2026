@@ -11,22 +11,23 @@ for x in "123":
     s = s.replace(x, "x")
 
 res = []
-print(s)
+
+
 for l in range(len(s)):
-    for r in range(l + maxl, len(s)):
-        d = s[l:r + 1]
+    cnta = 0
+    cntx = 0
 
-        if d.count("A") > 2 * d.count("x") or d.count("A") < d.count("x"):
-            break
+    for r in range(l, len(s)):
+        if s[r] == "A":
+            cnta += 1
+        else:
+            cntx += 1
 
-        if d.count("A") == 2 * d.count("x"):
-            maxl = max(maxl, r - l + 1)
-            res.append(d)
-            print(d, maxl)
+        if cnta == 2 * cntx:
+            res.append(r - l + 1)
 
 
-print(maxl)
-print(res)
+print(max(res))
 
 # pat = r"(?:(?:[KLMN]{2})(?:[123]{1})|(?:[123]{1})(?:[KLMN]{2}))+"
 # res = []
