@@ -1,4 +1,4 @@
-f = open("27A.txt")
+f = open("27A_18676.txt")
 
 data = []
 
@@ -37,7 +37,7 @@ def cen(clst):
             min_dist = sum_dist
             p_min = p1
 
-    return p1
+    return p_min
 
 
 print(len(data))
