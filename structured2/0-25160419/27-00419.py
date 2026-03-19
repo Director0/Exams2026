@@ -12,7 +12,7 @@ def dist(p1, p2):
 
 
 def get_cluster(p0):
-    clst = [p for p in data if dist(p0, p) <= 0.56]
+    clst = [p for p in data if dist(p0, p) <= 0.6]
 
     for a in clst:
         data.remove(a)
@@ -50,6 +50,7 @@ cen2 = cen(clst2)
 
 print(len(clst1))
 print(len(clst2))
+print(data)
 
 print(cen1)
 print(cen2)
