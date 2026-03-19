@@ -7,4 +7,4 @@ for x in 0, 1:
                 F = (not w) and (y or z <= y and (not x))
 
                 if F == 1:
-                    print(x, y, z, w, int(F))
+                    print(x, y, z, w, F)
