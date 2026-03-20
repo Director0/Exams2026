@@ -5,12 +5,11 @@ sums = []
 min2 = min([x for x in nums if abs(x) % 2 == 0])
 
 
-for i in range(len(nums) - 1):
-    for j in range(i + 1, len(nums)):
-        ls = [nums[i], nums[j]]
+for i in range(len(nums) - 2):
+    ls = [nums[i], nums[i + 2]]
 
-        if len([x for x in ls if x % 2 == 0]) == 1 and len([x for x in ls if x % min2 == 0]) == 1:
-            sums.append(sum(ls))
+    if len([x for x in ls if x % 2 == 0]) == 1 and nums[i + 1] % min2 == 0:
+        sums.append(sum(ls))
 
 
 
