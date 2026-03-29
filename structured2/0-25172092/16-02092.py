@@ -14,8 +14,5 @@ def f(x, y):
     return f(x - 1, f(x, y - 1))
 
 
-for x in range(4):
-    for y in range(12):
-        print(x, y, f(x, y))
 
 print(f(3, 11))
