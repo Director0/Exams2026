@@ -54,7 +54,7 @@ def maxdistpt(clsta, clstb, clstc):
             max_dist = sum_dist
             p_max = p1
 
-    return p_max
+    return p_max, max_dist
 
 
 print(len(data))
@@ -80,16 +80,20 @@ print(cen3)
 cl1 = maxdistpt(clst1, clst2, clst3)
 cl2 = maxdistpt(clst2, clst1, clst3)
 cl3 = maxdistpt(clst3, clst1, clst2)
-q2 = max(cl1, cl2, cl3)
+q2 = max(cl1[0], cl2[0], cl3[0])
 
 
 
 print(max(clst2)[0])
 print(q2[0] + q2[1])
 
+print(cl1)
+print(cl2)
+print(cl3)
 
-print(int(abs(max(clst2)[0]) * 10000))
-print(int(abs(q2[0] + q2[1]) * 10000))
+
+print(int(abs(max(clst3)[0]) * 10000))
+print(int(abs(cl3[0][0] + cl3[0][1]) * 10000))
 
 # print(abs(cen1[0] - cen2[0]))
 # print(abs(cen1[1] - cen2[1]))

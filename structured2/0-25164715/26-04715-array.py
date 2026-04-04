@@ -6,7 +6,6 @@ cnt = 0
 s1 = {1, 2, 3, 4, 5, 6, 7, 8}
 
 
-
 for s in f:
     ls = list(map(int, s.split()))
 
