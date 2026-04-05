@@ -13,26 +13,22 @@ def dvs(n):
 
 fl = False
 
-def moves(s):
-    global fl
-
+def moves(h):
+    s, fl = h
     mvs = []
 
-    mvs.append(s + 1)
-    mvs.append(s + 4)
+    mvs.append((s + 1, fl))
+    mvs.append((s + 4, fl))
 
     if fl == False:
-        mvs.append(s + sum(dvs(s)))
-        fl = True
+        mvs.append((s + sum(dvs(s)), True))
 
     return mvs
 
 
 @lru_cache(maxsize=None)
 def play(s):
-    global fl
-
-    if s >= 41:
+    if s[0] >= 43:
         return "P0"
     elif any(play(t) in "P0" for t in moves(s)):
         return "V1"
@@ -46,6 +42,8 @@ def play(s):
         return "?"
 
 
-print(19, [s for s in range(1, 43) if any(play(t) in "V1" for t in moves(s))])
-print(20, [s for s in range(1, 43) if play(s) in "V2"])
-print(21, [s for s in range(1, 43) if play(s) in "V1"])
+print(19, [s for s in range(1, 43) if any(play(t) in "V1" for t in moves((s, False)))])
+print(20, [s for s in range(1, 43) if play((s, False)) in "V2"])
+print(21, len([s for s in range(1, 43) if play((s, False)) in "V1"]))
+
+# 20 18 13
