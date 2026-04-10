@@ -2,12 +2,20 @@ from re import *
 
 s = open("24.txt").read()
 
+
 rs = []
 
-for l in "ABCDEFGHIJKLMNOPQRSTUVWXYZ":
-    pat = fr"X+Z"
-    rs += findall(pat, s)
+
+pat = fr"X[A-Z]Z"
+d = findall(pat, s)
+rs1 = {}
+
+for x in d:
+        if x[1] in rs1:
+            rs1[x[1]] += 1
+        else:
+            rs1[x[1]] = 1
 
 
-
-print(sorted(rs, key=len, reverse=True))
+print(rs1)
+print(max(rs1))

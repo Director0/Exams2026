@@ -9,15 +9,17 @@ def moves(s):
 
 @lru_cache(maxsize=None)
 def play(s):
-    if s >= 43:
+    if 43 <= s <= 72:
         return "P0"
+    elif s > 73:
+        return "L0"
     elif any(play(t) in "P0" for t in moves(s)):
         return "V1"
-    elif all(play(t) in "V1" for t in moves(s)):
+    elif all(play(t) in "V1L0" for t in moves(s)):
         return "P1"
     elif any(play(t) in "P1" for t in moves(s)):
         return "V2"
-    elif all(play(t) in "V1V2" for t in moves(s)):
+    elif all(play(t) in "V1V2L0" for t in moves(s)):
         return "P2"
     else:
         return "?"
