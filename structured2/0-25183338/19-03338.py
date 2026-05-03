@@ -26,5 +26,5 @@ def play(s):
 
 
 print(19, [s for s in range(1, 82) if play(s) in "V1"])
-print(19, [s for s in range(1, 82) if play(s) in "P1"])
+print(19, [s for s in range(1, 82) if play(s) in "P2"])
 print(19, [s for s in range(1, 82) if play(s) in "V2"])
