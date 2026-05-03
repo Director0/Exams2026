@@ -3,5 +3,5 @@ def f(x, y):
 
 
 for a in range(0, 10000):
-    if all(f(x, y) for x in range(0, 100) for y in range(0, 100)):
+    if all(f(x, y) for x in range(0, 1000) for y in range(0, 1000)):
         print(a)

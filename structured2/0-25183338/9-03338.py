@@ -2,6 +2,8 @@ f = open("9_03338.txt")
 
 cnt = 0
 
+
+
 for s in f:
     ls = list(map(int, s.split()))
 
