@@ -56,25 +56,18 @@ cen1 = cen(clst1)
 cen2 = cen(clst2)
 cen3 = cen(clst3)
 
-rg1 = [p for p in clst1 if fullmatch(r"Z[1-9]I", p[2])]
-rg2 = [p for p in clst2 if fullmatch(r"Z[1-9]I", p[2])]
-rg3 = [p for p in clst3 if fullmatch(r"Z[1-9]I", p[2])]
-
-
-b11 = min([dist(p1, p2) for p1 in clst1 for p2 in clst1 if dist(p1, p2) > 0])
-b13 = min([dist(p1, p2) for p1 in clst3 for p2 in clst3 if dist(p1, p2) > 0])
-
-b1 = min(b11, b13)
-
-print(b1)
 
 print(len(clst1))
 print(len(clst2))
+print(len(clst3))
 print(data)
-print(rg1)
-print(rg2)
-print(rg3)
-print(int(b1 * 10000))
-# print(int(a2 * 10000))
 
 
+b1 = min([dist(p1, p2) for p1 in clst1 for p2 in clst1 if p1 != p2 and fullmatch(r"Z[0-9]I", p1[2]) and fullmatch(r"Z[0-9]I", p2[2])] + [dist(p1, p2) for p1 in clst2 for p2 in clst2 if p1 != p2 and fullmatch(r"Z[0-9]I", p1[2]) and fullmatch(r"Z[0-9]I", p2[2])])
+b2 = dist(cen1, cen2)
+
+print(b1)
+print(b2)
+
+print(int(abs(b1 * 10000)))
+print(int(abs(b2 * 10000)))
