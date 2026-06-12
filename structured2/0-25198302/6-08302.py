@@ -23,7 +23,7 @@ down()
 
 rt(180)
 fd(60 * scl)
-bk(5)
+bk(5 * scl)
 rt(90)
 fd(31 * scl)
 
